@@ -68,3 +68,7 @@ displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
 //     });
 //   });
   
+const submitbtns = document.getElementById('submitButton');
+submitbtns.addEventListener('click', () => {
+    alert("응모가 완료되었습니다.")
+})
