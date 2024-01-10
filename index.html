@@ -236,6 +236,7 @@
         document.getElementById("submitForm").addEventListener("submit", function (e) {
           e.preventDefault(); // 폼의 기본 제출 동작 방지
           console.log('작동!')
+          alert('응모 되었습니다.')
 
           // 폼 데이터를 가져옵니다
           var formData = new FormData(this);
