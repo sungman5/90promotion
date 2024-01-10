@@ -221,7 +221,7 @@
     </section>
     <section id="section-8">
       <h2>응모하기</h2>
-      <form id="submitForm" method="POST" action="https://script.google.com/macros/s/AKfycbzotd9y5STSCWA4MGxx9OcXYcAbS9VNDZVeijMD2ZnIxh1G8-5t_CCaaG8s0MHcgAHQOg/exec">
+      <form class="gform" id="submitForm" method="POST" action="https://script.google.com/macros/s/AKfycbzYJ-QXi8vDQt_xQiLQO7aMS-qQpa2T6VY4UqSuAFuPQsmcVAmuOmS_gwaWseNJ8g6E/exec">
         <div class="request-wrap">
           <label for="">이름&nbsp;<span>*</span></label>
           <input type="text" name="name" placeholder="90퍼센트 회원가입시 등록한 이름을 적어주세요." required />
@@ -232,30 +232,6 @@
         </div>
         <button type="submit">제출하기</button>
       </form>
-      <script>
-        document.getElementById("submitForm").addEventListener("submit", function (e) {
-          e.preventDefault(); // 폼의 기본 제출 동작 방지
-          console.log('작동!')
-          alert('응모 되었습니다.')
-
-          // 폼 데이터를 가져옵니다
-          var formData = new FormData(this);
-
-          // fetch API를 사용하여 데이터를 비동기적으로 전송
-          fetch(this.action, {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.text())
-            .then((data) => {
-              // 응답 처리
-              alert("응모되었습니다"); // 성공 메시지 표시
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
-        });
-      </script>
     </section>
     <section id="section-9">
       <h3>이벤트 유의사항</h3>
