@@ -37,7 +37,7 @@ let itemNum = 0;
 const displayItem = document.getElementById("section-3-item");
 displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
 setInterval(() => {
-  console.log(itemNum);
+//   console.log(itemNum);
   if (itemNum < 3) {
     displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
     itemNum++;
@@ -46,7 +46,7 @@ setInterval(() => {
   }
 }, 500);
 
-const submitBtn = document.getElementById('submitButton');
-submitBtn.addEventListener('click', () => {
-    alert('준비 중입니다.')
-})
+// const submitBtn = document.getElementById('submitButton');
+// submitBtn.addEventListener('click', () => {
+//     alert('준비 중입니다.')
+// })

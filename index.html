@@ -221,7 +221,7 @@
     </section>
     <section id="section-8">
       <h2>응모하기</h2>
-      <form id="submitForm" method="POST" action="">
+      <form id="submitForm" method="POST" action="" onsubmit="return handleSubmit()">
         <div class="request-wrap">
           <label for="">이름&nbsp;<span>*</span></label>
           <input type="text" name="name" placeholder="90퍼센트 회원가입시 등록한 이름을 적어주세요." required />
@@ -230,8 +230,28 @@
           <label for="">휴대폰 번호&#40;-없이 숫자만 입력&#41;&nbsp;<span>*</span></label>
           <input type="number" name="phone" placeholder="90퍼센트 회원가입시 등록한 휴대폰 번호를 적어주세요." required />
         </div>
-        <button type="submit" id='submitButton'>제출하기</button>
+        <button type="submit" id="submitButton">제출하기</button>
       </form>
+      <script>
+        function handleSubmit() {
+          var form = document.getElementById("submitForm");
+          var formData = new FormData(form);
+          fetch("https://script.google.com/macros/s/AKfycbyPNGWhQXAfthja2lerrFvDGxtyyYl4gnVo7HiBG0IGbG5cbIu-0JrM-Zqsaqzvvbg/exec", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert("응모가 완료되었습니다");
+              }
+            })
+            .catch((error) => console.error("Error:", error));
+
+          return false; // 페이지 리로드 방지
+        }
+      </script>
+
     </section>
     <section id="section-9">
       <h3>이벤트 유의사항</h3>
