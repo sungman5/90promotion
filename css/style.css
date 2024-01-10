@@ -23,7 +23,7 @@ section {
 }
 
 #section-1 {
-  background-image: url("../imgs/background_txture.jpeg");
+  background-image: url("../imgs/background_txture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -408,14 +408,14 @@ section {
 }
 
 #section-5 {
-  background-image: url("../imgs/background_texture_2.jpeg");
+  background-image: url("../imgs/background_texture_2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #section-7 {
-  background-image: url("../imgs/background_texture_2.jpeg");
+  background-image: url("../imgs/background_texture_2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
