@@ -36,39 +36,17 @@ gsap.to("#animate-star-1, #animate-star-4", {
 let itemNum = 0;
 const displayItem = document.getElementById("section-3-item");
 displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
-// setInterval(() => {
-//   console.log(itemNum);
-//   if (itemNum < 3) {
-//     displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
-//     itemNum++;
-//   } else {
-//     itemNum = 0;
-//   }
-// }, 500);
+setInterval(() => {
+  console.log(itemNum);
+  if (itemNum < 3) {
+    displayItem.src = `./imgs/week01_${itemNum + 1}.png`;
+    itemNum++;
+  } else {
+    itemNum = 0;
+  }
+}, 500);
 
-// send data
-// document.getElementById('submitForm').addEventListener('submit', function(e) {
-//     e.preventDefault(); // 폼의 기본 제출 동작 방지
-  
-//     // 폼 데이터를 가져옵니다
-//     var formData = new FormData(this);
-  
-//     // fetch API를 사용하여 데이터를 비동기적으로 전송
-//     fetch(this.action, {
-//       method: 'POST',
-//       body: formData
-//     })
-//     .then(response => response.text())
-//     .then(data => {
-//       // 응답 처리
-//       alert('응모되었습니다'); // 성공 메시지 표시
-//     })
-//     .catch(error => {
-//       console.error('Error:', error);
-//     });
-//   });
-  
-const submitbtns = document.getElementById('submitButton');
-submitbtns.addEventListener('click', () => {
-    alert("응모가 완료되었습니다.")
+const submitBtn = document.getElementById('submitButton');
+submitBtn.addEventListener('click', () => {
+    alert('준비 중입니다.')
 })
