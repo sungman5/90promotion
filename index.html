@@ -221,11 +221,7 @@
     </section>
     <section id="section-8">
       <h2>응모하기</h2>
-      <form
-        id="submitForm"
-        method="POST"
-        action="https://script.google.com/macros/s/AKfycbx473nr8-0hTOSOdaQFMBByqGGTIbJHgM0ILLy9Lds5_lwKwLFBHvD_dAva3_Qg2NNEGw/exec"
-      >
+      <form id="submitForm" method="POST" action="https://script.google.com/macros/s/AKfycbx473nr8-0hTOSOdaQFMBByqGGTIbJHgM0ILLy9Lds5_lwKwLFBHvD_dAva3_Qg2NNEGw/exec">
         <div class="request-wrap">
           <label for="">이름&nbsp;<span>*</span></label>
           <input type="text" name="name" placeholder="90퍼센트 회원가입시 등록한 이름을 적어주세요." required />
@@ -239,6 +235,7 @@
       <script>
         document.getElementById("submitForm").addEventListener("submit", function (e) {
           e.preventDefault(); // 폼의 기본 제출 동작 방지
+          console.log('작동!')
 
           // 폼 데이터를 가져옵니다
           var formData = new FormData(this);
